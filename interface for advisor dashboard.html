@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration</title>
+    <title>Event Advisor Dashboard</title>
     <link rel="shortcut icon" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,20 +18,23 @@
             <h2>My<span class="danger">Petakom</span></h2>
         </div>
         <div class="navbar">
-    
             <a href="PROFILE.html">
                 <span class="material-icons-sharp">person</span>
                 <h3>PROFILE</h3>
-            </a> 
+            </a>
+            <a href="Event Advisor Dashboard.html">
+                <span class="material-icons-sharp">dashboard</span>
+                <h3>EVENT ADVISOR DASHBOARD</h3>
+            </a>
             <a href="Event Management (Register event).html">
                 <span class="material-icons-sharp">badge</span>
                 <h3>EVENT MANAGEMENT</h3>
-            </a> 
+            </a>
             <a href="Merit Management.html">
                 <span class="material-icons-sharp">star</span>
                 <h3>MERIT MANAGEMENT</h3>
-            </a> 
-            <a href="#">
+            </a>
+            <a href="#logout">
                 <span class="material-icons-sharp">logout</span>
                 <h3>Logout</h3>
             </a>
@@ -41,7 +44,7 @@
         </div>
     </header>
 
-    <div class="container">
+   <div class="container">
         <aside>
             <div class="profile">
                 <div class="top">
@@ -69,39 +72,72 @@
         </aside>
 
         <main>
-            <h1>Event Registration</h1>
-            <div class="event-form">
-                <h2>Register New Event</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="eventName">Event Name</label>
-                        <input type="text" id="eventName" name="eventName" placeholder="Enter Event Name" required>
-                    </div>
+            <h1>Event Advisor Dashboard</h1>
+            <div class="dashboard">
+                <div class="filter">
+                    <label for="filter">Filter By:</label>
+                    <input type="month" id="filter" name="filter" value="2025-01" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="eventStatus">Event Status</label>
-                        <input type="text" id="eventStatus" name="eventStatus" placeholder="Enter Event Status" required>
+                <div class="summary">
+                    <div class="card">
+                        <h3>Total Events</h3>
+                        <p>35</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="eventDate">Date and Time</label>
-                        <input type="datetime-local" id="eventDate" name="eventDate" required>
+                    <div class="card">
+                        <h3>Upcoming Events</h3>
+                        <p>5</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="geolocation">Geolocation</label>
-                        <input type="text" id="geolocation" name="geolocation" placeholder="Enter Geolocation" required>
+                    <div class="card">
+                        <h3>Completed Events</h3>
+                        <p>29</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="approvalLetter">Approval Letter</label>
-                        <input type="file" id="approvalLetter" name="approvalLetter" required>
+                    <div class="card">
+                        <h3>Cancelled Events</h3>
+                        <p>1</p>
                     </div>
+                    <div class="card">
+                        <h3>Total Participations</h3>
+                        <p>1500</p>
+                    </div>
+                </div>
 
-                    <button type="submit">Submit</button>
-                </form>
+                <div class="event-search">
+                    <label for="searchEvent">Search Event:</label>
+                    <input type="text" id="searchEvent" name="searchEvent" placeholder="Search for event...">
+                </div>
+
+                <div class="chart">
+                    <h3>Event Stats</h3>
+                    <canvas id="eventChart"></canvas>
+                </div>
             </div>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('eventChart').getContext('2d');
+        const eventChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Total Events', 'Upcoming Events', 'Completed Events', 'Cancelled Events', 'Total Participations'],
+                datasets: [{
+                    label: 'Event Data',
+                    data: [35, 5, 29, 1, 1500],
+                    backgroundColor: '#81d4fa',
+                    borderColor: '#4fa3d1',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

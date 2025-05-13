@@ -1,458 +1,458 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-:root{
-    --color-primary: #7380ec;
-    --color-danger: #ff7782;
-    --color-success: #41f1b6;
-    --color-warning: #ffbb55;
-    --color-white: #fff;
-    --color-info: #7d8da1;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-varient: #677483;
-    --color-background: #f6f6f9;
-    
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --box-shadow: 0 2rem 3rem var(--color-light)    
-}
-
-.dark-theme{
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-varient: #a3bdcc;
-    --color-light: rgba(0,0,0,0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light)
-}
-
-
-*{
-    margin:0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 14px;
-    scroll-behavior: smooth;
-}
-body{
+/* General Styles */
+body {
     font-family: 'Poppins', sans-serif;
-    font-size: .88rem;
-    background: var(--color-background);
-    user-select: none;
-    overflow-x: hidden;
-    color: var(--color-dark);
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
-*{
-    color: var(--color-dark);
+
+/* Header Container */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
 }
-img{
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Navbar Links */
+.navbar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background-color: #f06292;
+    border-radius: 6px;
+}
+
+/* Profile Button */
+#profile-btn {
+    margin-left: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#profile-btn .material-icons-sharp {
+    font-size: 24px;
+}
+
+/* Event Registration Form */
+.event-form {
+    background-color: #ffe0f0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #f8bbd0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.event-form h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-form .form-group {
+    margin-bottom: 20px;
+}
+
+.event-form label {
     display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.event-form input {
     width: 100%;
-}
-h1{
-    font-weight: 800;
-    font-size: 1.8rem;
-}
-h2{font-size: 1.4rem;}
-h3{font-size: .87rem;}
-h4{font-size: .8rem;}
-h5{font-size: .77rem;}
-small{font-size: .75rem;}
-
-.text-muted{color: var(--color-info);}
-p{color: var(--color-dark-varient);}
-b{color: var(--color-dark);}
-
-.primary{color: var(--color-primary);}
-.danger{color: var(--color-danger);}
-.success{color: var(--color-success)}
-.warning{color: var(--color-warning);}
-
-.container{
-    position: relative;
-    display: grid;
-    width: 93%;
-    margin: 0 3rem;
-    gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-    padding-top: 6rem;
-}
-header h3{font-weight: 500;} 
-header{
-    position: fixed;
-    width: 100vw;
-    z-index: 1000;
-    background-color: var(--color-background);
-}
-header.active{box-shadow: var(--box-shadow);}
-header .logo{
-    display: flex;
-    gap: .6rem;
-    margin-right: auto;
-}
-header .logo img{
-    width: 6rem;
-    height: 5.5rem;
+    padding: 12px;
+    border: 2px solid #f8bbd0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f1f8e9;
+    color: #5d4037;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
-.logo h2 {
-    margin-top: 20px; /* Adjust this value to move the text lower */
-    font-size: 2rem;  /* Optional: Adjust the font size for better visibility */
+.event-form input:focus {
+    border-color: #c2185b;
+    background-color: #fff;
 }
 
-header,
-header .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 3rem;
-    color: var(--color-info);
+/* Custom File Upload Styling */
+.event-form input[type="file"] {
+    padding: 8px 12px;
+    background-color: #e8f5e9;
+    border: 2px dashed #c2185b;
+    transition: all 0.3s ease;
 }
-header .navbar a{
-    display: flex;
-    margin-left: 2rem;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    height: 3.7rem;
-    transition: all 300ms ease;
-    padding: 0 2rem;
+
+.event-form input[type="file"]:hover {
+    border-color: #ad1457;
 }
-header .navbar a:hover {
-    padding-top: 1.5rem;
-}
-header .navbar a.active{
-    background: var(--color-light);
-    color: var(--color-primary);
-}
-header .navbar a.active::before{
-    content: "";
-    background-color: var(--color-primary);
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    left: 0;top: 0;
-}
-header #profile-btn{
-    display: none;
-    font-size: 2rem;
-    margin: .5rem 2rem 0 0;
-    cursor: pointer;
-}
-header .theme-toggler{
-    background: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
-    margin-right: 2rem;
-}
-header .theme-toggler span{
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .theme-toggler span.active{
-    background-color: var(--color-primary);
+
+/* Button Styling */
+.event-form button {
+    background-color: #c2185b;
     color: white;
-    border-radius: var(--border-radius-1);
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Profile section  */
-aside .profile{
-    margin-top: 2rem;
-    width: 13rem;
-    position: fixed;
+.event-form button:hover {
+    background-color: #ad1457;
+    transform: scale(1.05);
 }
-aside .profile .top{
+
+.event-form button:active {
+    background-color: #880e4f;
+    transform: scale(0.95);
+}
+
+.event-form button:focus {
+    outline: none;
+}
+
+/* Floating Labels */
+.event-form .form-group input::placeholder {
+    color: #c2185b;
+    font-weight: bold;
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Container */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Logo Styling */
+.logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid var(--color-light);
-    padding-bottom: 1rem;
-}
-aside .profile .top:hover .profile-photo{
-    scale: 1.05;
-}
-aside .profile .top .profile-photo{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid var(--color-light);
-    transition: all 400ms ease;
-}
-aside .profile .about p{
-    padding-bottom: 1rem;
-}
-aside .profile .about{
-    margin-top: 1rem;
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
-/* Home Section  */
-main{
-    position: relative;
-    margin-top: 1.4rem;
-}
-main .subjects{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.6rem;
+.logo img {
+    max-height: 50px;
+    margin-right: 10px;
 }
 
-main .subjects > div{
-    background-color: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-main .subjects > div:hover{
-    box-shadow: none;
-}
-main .subjects > div span{
-    background-color: var(--color-primary);
-    padding: .5rem;
-    border-radius: 50%;
-    color: var(--color-white);
-    font-size: 1.5rem;
-}
-main .subjects > div.mth span,main .subjects > div.cg span{background: var(--color-danger);}
-main .subjects > div.cs span{background: var(--color-success);}
-
-main .subjects h3{
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-}
-main .subjects .progress{
-    position: relative;
-    width: 89px;
-    height: 89px;
-    border-radius: 50%;
-    margin: auto;
-}
-main .subjects svg circle{
-    fill: none;
-    stroke: var(--color-primary);
-    stroke-width: 8;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-    stroke-dasharray: 110;
-    stroke-dashoffset: 92;
-}
-main .subjects .eg svg circle{
-    stroke-dashoffset: 25;
-    stroke-dasharray: 210;
-}
-main .subjects .mth svg circle{
-    stroke-dashoffset: 7;
-    stroke-dasharray: 210;
-}
-main .subjects .cs svg circle{
-    stroke-dashoffset: 35;
-    stroke-dasharray: 210;
-}
-main .subjects .cg svg circle{
-    stroke-dashoffset: 0;
-    stroke-dasharray: 210;
-}
-main .subjects .net svg circle{
-    stroke-dashoffset: 5;
-    stroke-dasharray: 210;
-}
-main .subjects .progress .number{
-    position: absolute;
-    top: 0;left: 0;
-    height: 100%;
-    width: 100%;
+/* Navbar Container */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-main .subjects small{
-    margin-top: 1rem;
-    display: block;
-}
-main .timetable{
-    margin-top: 2rem;
-}
-main .timetable h2{
-    margin-bottom: .8rem;
-}
-main .timetable table{
-    background-color: var(--color-white);
-    width: 100%;
-    border-radius: var(--card-border-radius);
-    padding: var(--card-padding);
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-main .timetable span{display: none;}
-main .timetable table:hover{box-shadow: none;}
-main table tbody td{
-    height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-varient);
-}
-main table tbody tr:last-child td{border: none;}
 
-main .timetable.active{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;left: 0;
+/* Navbar Links */
+.navbar a {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }
-main .timetable.active h2{
-    color: var(--color-dark);
+
+.navbar a:hover {
+    background-color: #f06292;
+    border-radius: 6px;
 }
-main .timetable.active table{
-    width: 90%;
-    max-width: 1000px;
-    position: relative;
-}
-main .timetable.active span{
-    display: block;
-    font-size: 2rem;
-    color: var(--color-dark);
+
+/* Profile Button */
+#profile-btn {
+    margin-left: auto;
+    padding: 10px;
     cursor: pointer;
 }
-.timetable div{
-    position: relative;
-    width: 50%;
+
+#profile-btn .material-icons-sharp {
+    font-size: 24px;
+}
+
+/* Event Table Styles */
+.event-table {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    margin-top: 30px; /* Add space above the table */
+}
+
+.event-table h3 {
+    color: #c2185b;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures no extra space between table cells */
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Add border around the table */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd; /* Add border around each cell */
+}
+
+table th {
+    background-color: #f1f8e9;
+    color: #c2185b;
+}
+
+table td {
+    font-weight: 600;
+}
+
+.in-progress {
+    color: green;
+}
+
+.postponed {
+    color: orange;
+}
+
+.cancelled {
+    color: red;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+.submit-btn {
+    background-color: #c2185b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #ad1457;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Container */
+.header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-main .timetable.active .closeBtn{
-    position: absolute;
-    top: 5%;right: 5%;
-}
-
-
-/* Right  */
-.right{margin-top: 2.2rem;padding-left: 1.5rem;}
-
-.right .announcements h2{margin-bottom: .8rem;}
-.right .announcements .updates{
-    background-color: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-.right .announcements .updates:hover{box-shadow: none;}
-.right .announcements .updates .message{
-    gap: 1rem;
-    line-height: 1.5;
-    padding: .5rem 0;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
 }
 
-/* Teachers on leave  */
-.right .leaves{margin-top: 2rem;}
-.right .leaves h2{margin-bottom: .8rem;}
-.right .leaves .teacher{
-    background: var(--color-white);
+/* Logo Styling */
+.logo {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: .7rem;
-    padding: 1.4rem var(--card-padding);
-    border-radius: var(--border-radius-2);
-    transition: all 300ms ease;
-    box-shadow: var(--box-shadow);
-}
-.right .profile-photo{
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.right .leaves .teacher:hover{box-shadow: none;}
-
-
-
-
-
-/* MEDIA QUERIES  */
-@media screen and (max-width: 1200px) {
-    html{font-size: 12px;}
-    .container{
-        grid-template-columns: 13rem auto 20rem;
-    }
-    header{position: fixed;}
-    .container{padding-top: 4rem;}
-    header .logo h2{display: none;}
-    header .navbar h3{display: none;}
-    header .navbar a{width: 4.5rem; padding: 0 1rem;}
-
-    main .subjects{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1;
-    }
-    main .timetable{
-        width: 150%;
-        position: absolute;
-        padding: 4rem 0 0 0;
-    }
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
+.logo img {
+    max-height: 50px;
+    margin-right: 10px;
+}
 
-@media screen and (max-width: 768px){
-    html{font-size: 10px;}
-    header{padding: 0 .8rem;}
-    .container{width: 100%; grid-template-columns: 1fr;margin: 0;}
-    header #profile-btn{display: inline;}
-    header .navbar{padding: 0;}
-    header .navbar a{margin: 0 .5rem 0 0;}
-    header .theme-toggler{margin: 0;}
-    aside{
-        position: absolute;
-        top: 4rem;left: 0;right: 0;
-        background-color: var(--color-white);
-        padding-left: 2rem;
-        transform: translateX(-100%);
-        z-index: 10;
-        width:18rem;
-        height: 100%;
-        box-shadow: 1rem 3rem 4rem var(--color-light);
-        transition: all 2s ease;
-    }
-    aside.active{
-        transform: translateX(0);
-    }
-    main{padding: 0 2rem;}
-    main .timetable{
-        position: relative;
-        margin: 3rem 0 0 0;
-        width: 100%;
-    }
-    main .timetable table{
-        width: 100%;
-        margin: 0;
-    }
-    .right{
-        width: 100%;
-        padding: 2rem;
-    }
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Navbar Links */
+.navbar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    background-color: #f06292;
+    border-radius: 6px;
+}
+
+/* Profile Button */
+#profile-btn {
+    margin-left: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#profile-btn .material-icons-sharp {
+    font-size: 24px;
+}
+
+/* Event Details Section */
+.event-details {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.event-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-header h3 {
+    color: #c2185b;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.event-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+.qr-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.qr-code {
+    width: 100px;  /* Adjust width as needed */
+    height: 100px; /* Adjust height to maintain the aspect ratio */
+    margin-bottom: 20px;
+}
+
+
+.generate-qr-btn {
+    background-color: #81d4fa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.generate-qr-btn:hover {
+    background-color: #4fa3d1;
+}
+
+.event-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.edit-btn {
+    background-color: #c2185b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    background-color: #ad1457;
 }

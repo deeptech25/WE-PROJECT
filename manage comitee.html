@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management - Manage Committee</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="MyPetakom">
+            <img src="image/LOGO UMPSA.png" alt="UMP Logo">
+            <img src="image/LOGO PETAKOM.png" alt="PETAKOM Logo">
+            <h2>My<span class="danger">Petakom</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="PROFILE.html">
+                <span class="material-icons-sharp">person</span>
+                <h3>PROFILE</h3>
+            </a>
+            <a href="Event Management (View event).html">
+                <span class="material-icons-sharp">badge</span>
+                <h3>EVENT MANAGEMENT</h3>
+            </a>
+            <a href="Merit Management.html">
+                <span class="material-icons-sharp">star</span>
+                <h3>MERIT MANAGEMENT</h3>
+            </a>
+            <a href="#logout">
+                <span class="material-icons-sharp">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="image/mario.webp" alt="">
+                    </div>
+                    <div class="info">
+                        <p>Hey, <b>Umairah Irdina</b></p>
+                        <small class="text-muted">12115153</small>
+                    </div>
+                </div>
+                <div class="about">
+                    <h5>Course</h5>
+                    <p>"Bachelor Of Software Engineering"</p>
+                    <h5>DOB</h5>
+                    <p>13-April-2004</p>
+                    <h5>Contact</h5>
+                    <p>0148226484</p>
+                    <h5>Email</h5>
+                    <p>umairah@gmail.com</p>
+                    <h5>Address</h5>
+                    <p>-</p>
+                </div>
+            </div>
+        </aside>
+
+
+        <main>
+            <h1>Event Management - Manage Committee</h1>
+
+            <div class="event-committee">
+                <div class="event-header">
+                    <h3>COMBAT 2025</h3>
+                    <p><strong>EVENT NAME:</strong> COMBAT 2025</p>
+                    <p><strong>DATE AND TIME:</strong> 29/12/2024, 5:00 P.M.</p>
+                </div>
+
+                <div class="committee-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>COMMITTEE NAME</th>
+                                <th>MATRIC ID</th>
+                                <th>ROLE</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MUHAMMAD AIZUL IZMIL BIN ABDUL</td>
+                                <td>CB23078</td>
+                                <td>PROGRAM DIRECTOR</td>
+                                <td>
+                                    <button class="update-btn">Update</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NOAH ADRIAN BIN ZACK</td>
+                                <td>CD22046</td>
+                                <td>SECRETARY</td>
+                                <td>
+                                    <button class="update-btn">Update</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NATASHA BINTI SOBRI</td>
+                                <td>26/12/2024</td>
+                                <td>TREASURER</td>
+                                <td>
+                                    <button class="update-btn">Update</button>
+                                    <button class="delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

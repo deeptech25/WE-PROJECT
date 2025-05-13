@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration</title>
+    <title>Event Management - View Event</title>
     <link rel="shortcut icon" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,20 +18,19 @@
             <h2>My<span class="danger">Petakom</span></h2>
         </div>
         <div class="navbar">
-    
             <a href="PROFILE.html">
                 <span class="material-icons-sharp">person</span>
                 <h3>PROFILE</h3>
-            </a> 
-            <a href="Event Management (Register event).html">
+            </a>
+            <a href="Event Management (View event).html">
                 <span class="material-icons-sharp">badge</span>
                 <h3>EVENT MANAGEMENT</h3>
-            </a> 
+            </a>
             <a href="Merit Management.html">
                 <span class="material-icons-sharp">star</span>
                 <h3>MERIT MANAGEMENT</h3>
-            </a> 
-            <a href="#">
+            </a>
+            <a href="#logout">
                 <span class="material-icons-sharp">logout</span>
                 <h3>Logout</h3>
             </a>
@@ -69,37 +68,55 @@
         </aside>
 
         <main>
-            <h1>Event Registration</h1>
-            <div class="event-form">
-                <h2>Register New Event</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="eventName">Event Name</label>
-                        <input type="text" id="eventName" name="eventName" placeholder="Enter Event Name" required>
-                    </div>
+            <h1>Event Management - View Event</h1>
 
-                    <div class="form-group">
-                        <label for="eventStatus">Event Status</label>
-                        <input type="text" id="eventStatus" name="eventStatus" placeholder="Enter Event Status" required>
-                    </div>
+            <div class="event-table">
+                <h3>LIST OF EVENT REGISTERED</h3>
 
-                    <div class="form-group">
-                        <label for="eventDate">Date and Time</label>
-                        <input type="datetime-local" id="eventDate" name="eventDate" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="geolocation">Geolocation</label>
-                        <input type="text" id="geolocation" name="geolocation" placeholder="Enter Geolocation" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="approvalLetter">Approval Letter</label>
-                        <input type="file" id="approvalLetter" name="approvalLetter" required>
-                    </div>
-
-                    <button type="submit">Submit</button>
-                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EVENT NAME</th>
+                            <th>DATE AND TIME</th>
+                            <th>LOCATION</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>COMBAT 2025</td>
+                            <td>29/12/2024, 5:00 P.M.</td>
+                            <td>ASTAKA FK</td>
+                            <td class="in-progress">In-progress</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IC-CINO 24</td>
+                            <td>29/12/2024, 5:00 P.M.</td>
+                            <td>DKI</td>
+                            <td class="postponed">Postponed</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HARI ANUGERAH KECEMERLANGAN</td>
+                            <td>26/12/2024</td>
+                            <td>JAKIM</td>
+                            <td class="cancelled">Cancelled</td>
+                            <td>
+                                <button class="update-btn">Update</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="submit-btn">Submit</button>
             </div>
         </main>
     </div>
